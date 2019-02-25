@@ -1,10 +1,9 @@
 # Image processing with Python and OpenCv 
-### press Q to exit
+### press Q to exit, main.py video output. face.py to see actual face recognition with tracking.
 
 ### To run in terminal cd to folder and
 ```
-python main.py to see video output.
-run python face.py to see actual face recognition with tracking. 
+python face.py  
 ```
 
 ### To display video and out put to avi, but needed it to be converted to .mov to view footage use online converter. 
