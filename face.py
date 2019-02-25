@@ -15,7 +15,6 @@ while True:
 
     font = cv.FONT_HERSHEY_SIMPLEX
 
-    # cv.putText(frame,'Ryan',(10,140), font, 6, (200,80,155), 8, cv.LINE_AA)
 
 
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
@@ -30,6 +29,8 @@ while True:
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
         cv.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
+        cv.putText(frame,'ryan',(x + w, y + h), font, 6, (200,80,155), 8, cv.LINE_AA)
+
     # Display the resulting frame
     cv.imshow('Video', frame)
     cv.imshow('Video2', gray)
