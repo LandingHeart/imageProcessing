@@ -2,6 +2,7 @@
 
 ## To run in terminal cd to folder and
 ```
-python main.py, or face.py or vid.py or draw.py 
+python main.py to see video output.
+run python face.py to see actual face recognition with tracking. 
 
 ```

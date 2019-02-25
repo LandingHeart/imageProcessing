@@ -28,6 +28,7 @@ while True:
 
     # Display the resulting frame
     cv.imshow('Video', frame)
+    cv.imshow('Video2', gray)
 
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
