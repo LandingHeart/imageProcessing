@@ -3,12 +3,15 @@ import numpy as np
 import sys
 
 cascPath = sys.argv[0]
+cap = cv.VideoCapture(0)
+cap.set(3,640) # set Width
+cap.set(4,480) # set Height
 face_cascade = cv.CascadeClassifier('/Users/shinan/Desktop/imageProcessing/data/haarcascades/haarcascade_frontalface_default.xml')
-video_capture = cv.VideoCapture(0)
+
 
 while True:
     # Capture frame-by-frame
-    ret, frame = video_capture.read()
+    ret, frame = cap.read()
 
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(
@@ -30,5 +33,5 @@ while True:
         break
 
 # When everything is done, release the capture
-video_capture.release()
+cap.release()
 cv.destroyAllWindows()
