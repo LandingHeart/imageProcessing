@@ -13,6 +13,11 @@ while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
 
+    font = cv.FONT_HERSHEY_SIMPLEX
+
+    # cv.putText(frame,'Ryan',(10,140), font, 6, (200,80,155), 8, cv.LINE_AA)
+
+
     gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
     faces = face_cascade.detectMultiScale(
         gray,
@@ -25,7 +30,6 @@ while True:
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
         cv.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-
     # Display the resulting frame
     cv.imshow('Video', frame)
     cv.imshow('Video2', gray)
