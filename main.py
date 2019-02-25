@@ -3,6 +3,8 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 cap = cv2.VideoCapture(0)
+cap.set(3,640) # set Width
+cap.set(4,480) # set Height
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
 out = cv2.VideoWriter('output.avi', fourcc, 20.0,(640, 480))
 
