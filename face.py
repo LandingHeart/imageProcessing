@@ -29,7 +29,7 @@ while True:
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
         cv.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv.putText(frame,'ryan',(x - 50, y + 120), font, 2, (200,80,155), 2, cv.LINE_AA)
+        cv.putText(frame,'Tommy',(x - 50, y + 180), font, 2, (200,80,155), 2, cv.LINE_AA)
 
     # Display the resulting frame
     cv.imshow('Video', frame)
