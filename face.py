@@ -7,7 +7,8 @@ cap = cv.VideoCapture(0)
 cap.set(3,640) # set Width
 cap.set(4,480) # set Height
 face_cascade = cv.CascadeClassifier('/Users/shinan/Desktop/imageProcessing/data/haarcascades/haarcascade_frontalface_default.xml')
-
+fourcc = cv.VideoWriter_fourcc(*'XVID')
+out = cv.VideoWriter('output.avi', fourcc, 20.0,(640, 480))
 
 while True:
     # Capture frame-by-frame
@@ -29,7 +30,7 @@ while True:
     # Draw a rectangle around the faces
     for (x, y, w, h) in faces:
         cv.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        cv.putText(frame,'Me',(x - 50, y + 180), font, 2, (200,80,155), 2, cv.LINE_AA)
+        cv.putText(frame,'',(x - 50, y + 180), font, 2, (200,80,155), 2, cv.LINE_AA)
 
     # Display the resulting frame
     cv.imshow('Video', frame)
