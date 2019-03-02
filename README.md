@@ -1,6 +1,6 @@
 # Image processing with Python and OpenCv 
 
-### The data folder contains the .xml from Opnecv, trained data to detect faces. To run in terminal cd to imageProcessing. And python filename.py
+### Add the path to opencv/data/haard_cascade to the path variable.
 * press Q to exit, main.py video output. face.py to see actual face recognition with tracking.
 
 ```
