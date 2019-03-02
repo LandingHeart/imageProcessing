@@ -2,11 +2,11 @@ import cv2 as cv
 import numpy as np 
 import sys
 
-cascPath = '/Users/shinan/opencv/data/haarcascades/haarcascade_frontalface_default.xml'
+cascPath = sys.argv[0]
 cap = cv.VideoCapture(0)
 cap.set(3,640) # set Width
 cap.set(4,480) # set Height
-face_cascade = cv.CascadeClassifier('cascPath')
+face_cascade = cv.CascadeClassifier('/Users/shinan/opencv/data/haarcascades/haarcascade_frontalface_default.xml')
 fourcc = cv.VideoWriter_fourcc(*'XVID')
 out = cv.VideoWriter('output.avi', fourcc, 20.0,(640, 480))
 
