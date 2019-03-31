@@ -9,12 +9,14 @@ cap.set(4,480) # set Height
 face_cascade = cv.CascadeClassifier('/Users/shinan/opencv/data/haarcascades/haarcascade_frontalface_default.xml')
 fourcc = cv.VideoWriter_fourcc(*'XVID')
 out = cv.VideoWriter('output.avi', fourcc, 20.0,(640, 480))
+fgbg = cv.createBackgroundSubtractorMOG2()
 
 while True:
     # Capture frame-by-frame
     ret, frame = cap.read()
 
     font = cv.FONT_HERSHEY_SIMPLEX
+    fgmask = fgbg.apply(frame)
 
 
 
@@ -35,7 +37,8 @@ while True:
     # Display the resulting frame
     cv.imshow('Video', frame)
     cv.imshow('Video2', gray)
-
+    cv.imshow('fgmask', fgmask)
+    
     if cv.waitKey(1) & 0xFF == ord('q'):
         break
 
