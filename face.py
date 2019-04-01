@@ -8,7 +8,7 @@ cap.set(3,640) # set Width
 cap.set(4,480) # set Height
 face_cascade = cv.CascadeClassifier('/Users/shinan/opencv/data/haarcascades/haarcascade_frontalface_default.xml')
 fourcc = cv.VideoWriter_fourcc(*'XVID')
-out = cv.VideoWriter('output.avi', fourcc, 20.0,(640, 480))
+out = cv.VideoWriter('/videos/output.avi', fourcc, 20.0,(640, 480))
 
 while True:
     # Capture frame-by-frame

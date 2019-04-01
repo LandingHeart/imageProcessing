@@ -4,7 +4,7 @@ import sys
 
 cascPath = sys.argv[0]
 # cap = cv.VideoCapture('output.avi')
-cap = cv.VideoCapture('walking.mov')
+cap = cv.VideoCapture('/videos/walking.mov')
 cap.set(3,640) # set Width
 cap.set(4,480) # set Height
 
